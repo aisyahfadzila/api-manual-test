@@ -17,7 +17,7 @@ Expected results follow the Swagger documentation. Bug IDs refer to `BUG_REPORT.
 | TC-04 | Wrong type for id | 405 | 500, `"something bad happened"` | **Fail** | BUG-002 |
 | TC-05 | Status outside enum | 405 | 200, pet stored with `"status": "xyz"` | **Fail** | BUG-003 |
 | TC-06 | XML content type | 200 | 200 | Pass | |
-| TC-07 | Duplicate id | Behavior noted (no 5xx) | No 5xx (assertion passed); exact status not recorded | Pass | |
+| TC-07 | Duplicate id | Behavior noted (no 5xx) | Request handled without a server error (status below 500) | Pass | |
 
 ## GET /pet/findByStatus
 | ID | Scenario | Expected | Actual | Status | Bug |
